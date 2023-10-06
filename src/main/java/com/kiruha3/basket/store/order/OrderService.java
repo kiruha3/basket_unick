@@ -1,10 +1,5 @@
 package com.kiruha3.basket.store.order;
 
-import com.kiruha3.basket.store.Basket;
-import com.kiruha3.basket.store.Item;
-import org.springframework.context.annotation.Scope;
-import org.springframework.context.annotation.ScopedProxyMode;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.annotation.SessionScope;
 

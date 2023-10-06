@@ -1,6 +1,5 @@
 package com.kiruha3.basket.store.order;
 
-import com.kiruha3.basket.store.Basket;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -12,10 +11,8 @@ import java.util.List;
 @RestController
 public class OrderController {
     private final OrderService orderService;
-    private  Basket basket;
-    public OrderController(OrderService orderService, Basket basket) {
+    public OrderController(OrderService orderService) {
         this.orderService = orderService;
-        this.basket = basket;
     }
 
     @GetMapping()
