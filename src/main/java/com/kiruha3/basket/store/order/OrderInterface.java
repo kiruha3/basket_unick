@@ -6,6 +6,7 @@ import java.util.List;
 
 @Service
 public interface OrderInterface {
-    void add (List<Integer> itemsIds);
+    void add(List<Integer> itemsIds);
+
     List<Integer> get();
 }

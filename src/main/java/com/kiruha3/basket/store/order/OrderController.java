@@ -11,6 +11,7 @@ import java.util.List;
 @RestController
 public class OrderController {
     private final OrderService orderService;
+
     public OrderController(OrderService orderService) {
         this.orderService = orderService;
     }
@@ -24,6 +25,7 @@ public class OrderController {
     public void addItemInBasket(@RequestParam(value = "items", required = false) List<Integer> itemIds) {
         orderService.add(itemIds);
     }
+
     @GetMapping(path = "/get")
     public List<Integer> addItemInBasket() {
         return orderService.get();

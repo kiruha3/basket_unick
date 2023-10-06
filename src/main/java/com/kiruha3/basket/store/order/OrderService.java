@@ -13,17 +13,14 @@ import java.util.List;
 @SessionScope
 public class OrderService implements OrderInterface {
     public List<Integer> listItems = new ArrayList<>();
-//    private final Basket basket;
 
-//    public OrderService(Basket basket) {
-//        this.basket = basket;
-//    }
     @PostConstruct
-    public void setup(){
+    public void setup() {
         System.out.println("setup");
     }
+
     @PreDestroy
-    public void destroy(){
+    public void destroy() {
         System.out.println("destroy");
     }
 
