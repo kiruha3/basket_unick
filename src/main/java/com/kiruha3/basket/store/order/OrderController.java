@@ -25,9 +25,7 @@ public class OrderController {
 
     @GetMapping(path = "/add")
     public void addItemInBasket(@RequestParam(value = "items", required = false) List<Integer> itemIds) {
-        for (Integer itemId : itemIds) {
-            orderService.add(itemId);
-        }
+        orderService.add(itemIds);
     }
     @GetMapping(path = "/get")
     public List<Integer> addItemInBasket() {

@@ -8,6 +8,6 @@ import java.util.List;
 
 @Service
 public interface OrderInterface {
-    void add (Integer itemsIds);
+    void add (List<Integer> itemsIds);
     List<Integer> get();
 }
