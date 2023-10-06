@@ -12,7 +12,7 @@ import java.util.List;
 @Service
 @SessionScope
 public class OrderService implements OrderInterface {
-    public List<Integer> listItems = new ArrayList<>();
+    public List<Integer> bascketForItems = new ArrayList<>();
 
     @PostConstruct
     public void setup() {
@@ -27,14 +27,14 @@ public class OrderService implements OrderInterface {
     @Override
     public void add(List<Integer> itemsIds) {
         for (Integer itemsId : itemsIds) {
-            if (!listItems.contains(itemsId)) {
-                listItems.add(itemsId);
+            if (!bascketForItems.contains(itemsId)) {
+                bascketForItems.add(itemsId);
             }
         }
     }
 
     @Override
     public List<Integer> get() {
-        return listItems;
+        return bascketForItems;
     }
 }
